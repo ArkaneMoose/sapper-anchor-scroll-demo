@@ -2,6 +2,6 @@
 	<title>About</title>
 </svelte:head>
 
-<h1>About this site</h1>
-
-<p>This is the 'about' page. There's not much here.</p>
+{#each new Array(200) as _, i}
+<p id={`anchor-${i}`}>This paragraph has id <code>anchor-{i}</code>.</p>
+{/each}

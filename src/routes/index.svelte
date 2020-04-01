@@ -1,46 +1,15 @@
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
-
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Sapper Anchor Scroll Demo</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Sapper Anchor Scroll Demo</h1>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
+<p>First, go to the <a href="/about">about tab</a> and observe the 200 paragraphs on that page, each with their own anchor.</p>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<p>Then, return to this page, and <a href="#bottom">click here to go to the bottom of the page.</a></p>
+
+{#each new Array(100) as _, i}
+<p>Filler text.</p>
+{/each}
+
+<p id="bottom">Welcome to the bottom of the page. Finally, <a href="/about#anchor-100">click here to go to <code>anchor-100</code> on the about page.</a></p>

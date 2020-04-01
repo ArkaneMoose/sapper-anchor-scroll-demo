@@ -1,6 +1,7 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "sapper-anchor-scroll-demo",
+  "description": "Demos scrolling to anchor in Sapper",
+  "license": "MIT",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
